@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Blog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+	<head>
+	  <title>Blog</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div id="sidebar">
 
-<%= yield %>
+			<ul>
+				<li class="category">Website</li>
+				<li><%= link_to "Blog", root_path %></li>
+				<li>About</li>
+			</ul>
 
-</body>
+			<ul>
+				<li class="category">Social</li>
+				<li><a href="https://twitter.com/erickuhn19">Twitter</a></li>
+				<li><a href="https://github.com/erickuhn19">Github</a></li>
+			</ul>
+
+	<%= yield %>
+
+	</body>
 </html>
